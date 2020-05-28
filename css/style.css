@@ -62,8 +62,13 @@ text-transform: capitalize;padding:.5rem 1rem !important;margin:1rem 0 0 1.5rem;
 .services .row div img{margin:1rem}
 .services .row div h4{margin-bottom:1rem;margin-left: 1rem;}
 footer{background-color: #1F2233;padding:3rem 0}
-.navbar-toggler-icon{background-color:#FD5C55 !important;outline: none !important;}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(253, 92, 85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
 
+.navbar-toggler {
+  border-color: #FD5C55 !important;
+} 
 @media (max-width:1200px){
   .discover img{width:95%;}
 }
