@@ -5,9 +5,11 @@ background-size: cover;background-repeat: no-repeat;}
 .hero-overlay{background-color: rgba(0, 0, 0, 0.8);width:100%;min-height: 100vh;padding-bottom: 15rem !important;}
 .navbar{background: transparent !important;transition: all 0.6s ease-in-out;}
 .fixed-top.scrolled {
+    z-index: 22;
     background-color: #1F2233 !important;
     transition: background-color 200ms linear;
   }
+#progress-bar{width:10%;height: 5px;background-color: #FD5C55;position: fixed;z-index: 44 !important;}
 .navbar a{color:white !important;}
 ul li a:hover,ul li a:active,ul li a,#active{color:#FD5C55 !important;transition: all 0.6s ease-in-out;}
 .navbar-brand,footer span{font-size: 2rem;letter-spacing: 4px;}
@@ -67,8 +69,10 @@ footer{background-color: #1F2233;padding:3rem 0}
 }
 
 .navbar-toggler {
-  border-color: #FD5C55 !important;
+  border-color:transparent !important;
+  outline:none !important;
 } 
+
 @media (max-width:1200px){
   .discover img{width:95%;}
 }
