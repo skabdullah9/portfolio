@@ -1,4 +1,5 @@
 *,*::before,*::after{box-sizing: border-box;margin:0;padding:0;}
+html{scroll-behavior: smooth;}
 body{transition: all 1s ease-in-out;}
 .hero{background-image: url('../images/home2.jpg');width:100%;min-height: 100vh;background-position: center;
 background-size: cover;background-repeat: no-repeat;}
@@ -9,7 +10,7 @@ background-size: cover;background-repeat: no-repeat;}
     background-color: #1F2233 !important;
     transition: background-color 200ms linear;
   }
-#progress-bar{width:10%;height: 5px;background-color: #FD5C55;position: fixed;z-index: 44 !important;}
+#progress-bar{width:0%;height: 5px;background-color: #FD5C55;position: fixed;z-index: 44 !important;}
 .navbar a{color:white !important;}
 ul li a:hover,ul li a:active,ul li a,#active{color:#FD5C55 !important;transition: all 0.6s ease-in-out;}
 .navbar-brand,footer span{font-size: 2rem;letter-spacing: 4px;}
@@ -22,10 +23,11 @@ text-transform: capitalize;padding:.5rem 1rem !important;margin:1rem 0 0 1.5rem;
 .hero-content img{width:200px;border-radius: 50%;display: block;margin:0 auto;}
 .hero-content h1{color:#FD5C55;font-size: 4rem;font-weight: 700;margin-top:1.1rem;}
 .hero-content h5{color:whitesmoke;font-size: 1.2rem;}
-.discover{min-height: 100vh;width: 100%;background-color:#1F2233;padding:9rem 0;}
+.discover,.contact{min-height: 100vh;width: 100%;background-color:#1F2233;padding:9rem 0;}
+.contact{background-color: #24283D;padding-top: 0;;}
 .discover img{width:400px;height:480px;object-fit:cover;box-shadow: 0 0 15px rgba(0, 0, 0, .2);padding:7px;}
-.discover h3{color:#FD5C55}
-.discover h1{color:white;font-size: 2.6rem;}
+.discover h3,.contact h3{color:#FD5C55}
+.discover h1,.contact h1{color:white;font-size: 2.6rem;}
 .discover h1::after{
     content:'';
     width:66px;
@@ -39,10 +41,10 @@ text-transform: capitalize;padding:.5rem 1rem !important;margin:1rem 0 0 1.5rem;
 .info .row{border:1px solid #FD5C55;border-radius: 5px;padding:1rem}
 .info p{line-height: 2.4rem;font-size: 1rem;}
 .info span{font-weight: 600;}
-.discover button{background-color: #FD5C55;color: white;padding: .8rem 1.7rem;font-weight: 600;transition: all 0.6s ease-in-out;}
+.discover button,.contact button{background-color: #FD5C55;color: white;padding: .8rem 1.7rem;font-weight: 600;transition: all 0.6s ease-in-out;}
 .meta{margin:2rem 0;}
-.discover button:hover{background-color: transparent;color: #FD5C55;border:1px solid #FD5C55;}
-.services{background-color: #24283D;padding:7rem 0}
+.discover button:hover,.contact button:hover{background-color: transparent;color: #FD5C55;border:1px solid #FD5C55;}
+.services{background-color: #24283D;padding:7rem 0;border-bottom: 1px solid #333333;}
 .services h4{color:white;}
 .services p{color:#CDCCCC;}
 .services h3{color:#FD5C55}
@@ -63,11 +65,31 @@ text-transform: capitalize;padding:.5rem 1rem !important;margin:1rem 0 0 1.5rem;
 .services .row div p{width:100%;margin-left: 1rem;margin-right: 1rem;}
 .services .row div img{margin:1rem}
 .services .row div h4{margin-bottom:1rem;margin-left: 1rem;}
+.contact{position: relative;}
+.contact h1::after{
+  content:'';
+    width:66px;
+    height: 2px;
+    background-color: #FD5C55;
+    position: absolute;
+    top:96px;
+    left: 80px
+}
+.contact input{background-color: transparent;border:3px solid #282c3e;outline:none;box-shadow: none;}
+.contact .box{display: flex;align-items: center;justify-content:space-around;border:1px solid #333333;margin:2rem 0;padding:1.5rem .5rem;background-color: #1F2233;}
+.box-content{color:white;}
+.contact .box:hover,.contact .box:nth-child(2){border:1px solid #FD5C55;transition: all .5s ease-in-out;}
+.box-content h6,.box-content p{margin:0;}
 footer{background-color: #1F2233;padding:3rem 0}
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(253, 92, 85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
-
+.contact input{outline:none;}
+.contact input:focus,.contact input:active {border:1px solid #FD5C55;background-color: transparent;outline: none !important;box-shadow: none;}
+.pageUp{background-color:#282c3e;color:#FD5C55;position:fixed;bottom: 2rem;right: 2rem;padding:0 .8rem;font-size: 1.9rem;border-radius: 5px;cursor: pointer;}
+.pageUp{display: none;}
+.pageUp a{color:#FD5C55;text-decoration: none;}
+hr{height: 1px;margin:0;color:black}
 .navbar-toggler {
   border-color:transparent !important;
   outline:none !important;

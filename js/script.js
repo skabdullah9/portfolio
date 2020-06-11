@@ -14,4 +14,11 @@ window.onscroll = function() {progress()}
 
   let scrolled = (windowScroll/height)*100;
   document.getElementById('progress-bar').style.width=scrolled+"%";
+  
+  
+  if (windowScroll>=800){
+    document.querySelector('.pageUp').style.display="inline-block"
+  } else {
+    document.querySelector('.pageUp').style.display="none"
+  }
  }
