@@ -94,20 +94,23 @@ hr{height: 1px;margin:0;color:black}
   border-color:transparent !important;
   outline:none !important;
 } 
-
+.navbar-brand .cross{border:1px solid white;}
 @media (max-width:1200px){
   .discover img{width:95%;}
 }
 @media (max-width:768px){
+  html{font-size: 14px;}
   .discover img{width:69%;}
 .services .row div:nth-child(2){margin-left:0;margin-right:0;}
 }
 @media (max-width:576px){
+  html{font-size: 12px;}
   .info{width:80%;margin:0 auto;}
   .discover button{margin:0 auto;display: block;}
+  .services .row {width:80%;margin:0 auto}
 .services .row div{margin-left:2rem;margin-right: 2rem;}
 .services .row div:nth-child(2){margin-left:2rem;margin-right: 2rem;}
 .navbar ul{background-color: #1F2233 !important;}
 .discover img{margin:0 auto;display: block;}
-
+.contact .row{width:90%;margin:0 auto;}
 }
