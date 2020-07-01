@@ -19,10 +19,22 @@ ul li a:hover,ul li a:active,ul li a,#active{color:#FD5C55 !important;transition
 .contact-btn{background-color: transparent;color:#FD5C55 !important;border:1px solid #FD5C55;
 text-transform: capitalize;padding:.5rem 1rem !important;margin:1rem 0 0 1.5rem;font-weight: 600;transition: all 0.6s ease-in-out;}
 .contact-btn:hover,.contact-btn:active{background-color: #FD5C55;color:white !important;}
-.hero-content{display: flex;justify-content:flex-end;align-items: center;height: 100vh;flex-direction: column;}
+.hero-content{display: flex;align-items: center;height: 100vh;flex-direction: column;padding-top: 10%;}
 .hero-content img{width:200px;border-radius: 50%;display: block;margin:0 auto;}
-.hero-content h1{color:#FD5C55;font-size: 4rem;font-weight: 700;margin-top:1.1rem;}
-.hero-content h5{color:whitesmoke;font-size: 1.2rem;}
+.hero-content h1{color:#FD5C55;font-size: 4rem;font-weight: 700;margin-top:1.1rem;letter-spacing: 4px;}
+.hero-content h5{color:whitesmoke;font-size: 1.6rem;
+letter-spacing: 4px;}
+.typewriter::after{
+  content: '';
+  width:3px;
+  height: 5%;
+  border-right: 2px solid #FD5C55;
+  animation: blinker .4s infinite ease;
+}
+@keyframes blinker{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
 .discover,.contact{min-height: 100vh;width: 100%;background-color:#1F2233;padding:9rem 0;}
 .contact{background-color: #24283D;padding-top: 0;;}
 .discover img{width:400px;height:480px;object-fit:cover;box-shadow: 0 0 15px rgba(0, 0, 0, .2);padding:7px;}
@@ -104,7 +116,7 @@ hr{height: 1px;margin:0;color:black}
 .services .row div:nth-child(2){margin-left:0;margin-right:0;}
 }
 @media (max-width:576px){
-  html{font-size: 12px;}
+  
   .info{width:80%;margin:0 auto;}
   .discover button{margin:0 auto;display: block;}
   .services .row {width:80%;margin:0 auto}
