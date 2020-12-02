@@ -1,6 +1,5 @@
-document.querySelector('.contact-btn').addEventListener('click',function(){
-    alert('dkfjk')
-})
+let sendMsgBtn = document.querySelector('.send-msg-btn');
+sendMsgBtn.addEventListener('click',()=>alert('Coming Soon...'));
 $(function () {
     $(document).scroll(function () {
       var $nav = $(".fixed-top");
@@ -22,7 +21,7 @@ window.onscroll = function() {progress()}
     document.querySelector('.pageUp').style.display="none"
   }
  }
- let texts=['A Creative Freelancer','A Full Stack Developer', 'A UI/UX Designer'];
+ let texts=['A Creative Freelancer','A Front-End Developer', 'A UI/UX Designer'];
  let count=0;
  let index=0;
  let currentText='';
@@ -40,4 +39,17 @@ window.onscroll = function() {progress()}
   }
   setTimeout(type,400)
  }
- type()
+ type();
+
+ $(function(){
+   let navbar = $("#navbarNav");
+   navbar.on('click', 'a', null, function() {
+     navbar.collapse('hide');
+   });
+ });
+
+ $(function() {
+   $(document).click(function (event) {
+     $('#navbarNav').collapse('hide');
+   })
+ })
