@@ -33,7 +33,7 @@ function progress() {
     activeNavlink(navlinks[2])
   }
   else {
-    activeNavlink(navlinks[4])
+    activeNavlink(navlinks[5])
   }
 
 }

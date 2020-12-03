@@ -13,46 +13,50 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Fahd Portfolio</title>
 </head>
+
 <body>
   <div class="hero" id="home">
     <div class="hero-overlay">
       <div id="progress-bar"></div>
       <div class="container">
         <div class="container">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">F<span>ahad</span></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            <!-- <span class="cross">X</span> -->
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link clicked" href="#home">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#discover">about</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#services">services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="files/My_CV.pdf" target="_blank">resume</a>
-              </li>    
-              <li class="nav-item">
-                <button class="nav-link btn btn-large contact-btn">
-                  <a href="#contact" class="contact-btn-link">contact me</a>
-                </button>
-              </li>
+          <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">F<span>ahad</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              <!-- <span class="cross">X</span> -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link clicked" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#discover">about</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services">services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#services">projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="files/My_CV.pdf" target="_blank">resume</a>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link btn btn-large contact-btn">
+                    <a href="#contact" class="contact-btn-link">contact me</a>
+                  </button>
+                </li>
 
 
-            </ul>
-          </div>
-        </nav>
+              </ul>
+            </div>
+          </nav>
         </div>
         <div class="hero-content">
-          <img src="images/my.jpg" class="img-fluid mt-5"  alt="">
+          <img src="images/my.jpg" class="img-fluid mt-5" alt="">
           <h1 class="text-center">Fahad Shaik</h1>
           <h5 class="text-center typewriter"></h5>
         </div>
@@ -65,12 +69,14 @@
     <div class="container" id="discover">
       <div class="row">
         <div class="col-md-4">
-          <img src="images/my1.jpg" alt="">
+          <img src="images/my1.jpg" id="profile-img" alt="">
         </div>
         <div class="col-md-8 mt-5 mt-md-2 pl-md-1">
           <h3 class="ml-md-5">Discover</h3>
           <h1 class="ml-md-5">About Me</h1>
-          <p class="ml-md-5 meta">My name is Fahad Shaik. I'm a Freelance Web Designer & Developer based in Hyderabad, India. I'm very passionate and dedicated to my work. With 2 years of experience as a professional Front End Developer aka [Web Designer]
+          <p class="ml-md-5 meta">My name is Fahad Shaik. I'm a Freelance Web Designer & Developer based in Hyderabad,
+            India. I'm very passionate and dedicated to my work. With 2 years of experience as a professional Front End
+            Developer aka [Web Designer]
             , I have acquired the skills necessary to build great and premium responsive websites.</p>
           <div class="info">
             <div class="row ml-md-5">
@@ -79,7 +85,7 @@
                   <span>Phone:</span> +91 8331049941<br>
                   <span>Experience:</span> 2 Years<br>
                   <span>Skype:</span> fahad.shaik<br>
-                  
+
                 </p>
               </div>
               <div class="col-sm-6">
@@ -87,13 +93,17 @@
                   <span>Age:</span> 19<br>
                   <span>Address:</span> Hyderabad, India<br>
                   <span>Freelance:</span> Available<br>
-                  <span>Upwork:</span> <a href="https://www.upwork.com/freelancers/~014a29c8763d2395ad" target="_blank" class="upwork-link">Profile link</a>
+                  <span>Upwork:</span> <a href="https://www.upwork.com/freelancers/~014a29c8763d2395ad" target="_blank"
+                    class="upwork-link">Profile link</a>
                 </p>
               </div>
             </div>
           </div>
           <form method="get" action="files/My_CV.pdf" target="_blank">
-          <button type="submit" class="btn btn-large ml-md-5 mt-4 cv-btn">DOWNLOAD CV</button>
+            <button type="submit" class="btn btn-large ml-md-5 mt-4 cv-btn">DOWNLOAD CV</button>
+          </form>
+          <form method="get" action="" target="_blank">
+            <button type="submit" class="btn btn-large ml-md-3 mt-4 projects-btn">VIEW PROJECTS</button>
           </form>
         </div>
       </div>
@@ -190,10 +200,14 @@
     </div>
 
   </section>
-  <div class="pageUp shadow-lg" >
-   <a href="#home">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1.5em" height="1.5em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path d="M6.293 13.293l1.414 1.414L12 10.414l4.293 4.293l1.414-1.414L12 7.586z" fill="#FD5C55"/></svg>
-   </a>
+  <div class="pageUp shadow-lg">
+    <a href="#home">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+        focusable="false" width="1.5em" height="1.5em"
+        style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+        preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+        <path d="M6.293 13.293l1.414 1.414L12 10.414l4.293 4.293l1.414-1.414L12 7.586z" fill="#FD5C55" /></svg>
+    </a>
   </div>
   <footer>
     <h1 class="text-white text-center">F<span>ahad</span></h1>
