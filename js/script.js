@@ -1,3 +1,5 @@
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh',`${vh}px`)
 const navlinks = document.querySelectorAll('.nav-link');
 let sendMsgBtn = document.querySelector('.send-msg-btn');
 sendMsgBtn.addEventListener('click', () => alert('Coming Soon...'));
@@ -24,10 +26,10 @@ function progress() {
   if(windowScroll >= 0 && windowScroll < 500){
     activeNavlink(navlinks[0])
   }
-  else if (windowScroll>=500 && windowScroll < 1300) {
+  else if (windowScroll>=500 && windowScroll < 1200) {
     activeNavlink(navlinks[1])
   } 
-  else if(windowScroll>=1300 && windowScroll < 2300) {
+  else if(windowScroll>=1200 && windowScroll < 2100) {
     activeNavlink(navlinks[2])
   }
   else {

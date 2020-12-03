@@ -7,21 +7,17 @@
   .navbar ul li a{text-align: center;font-size: 1.2rem;margin:0.5rem 0.5rem;}
   ul li a:hover,ul li a:active,.nav-link.clicked {background-color: #FD5C55;color:white !important;}
   .contact-btn{margin:1rem auto;font-size: 1.2rem;color: white !important}
-  .contact-btn a:active{color:white !important;background-color: yellow;}
 }
 @media (max-width:768px){
   html{font-size: 14px;}
   .discover img{width:69%;}
   .services .row div:nth-child(2){margin-left:0;margin-right:0;}
-  
 }
 @media (max-width:576px){
   
   .info{width:80%;margin:0 auto;}
   .discover button{margin:0 auto;display: block;}
   .services .row {width:80%;margin:0 auto}
-.services .row div{margin-left:2rem;margin-right: 2rem;}
-.services .row div:nth-child(2){margin-left:2rem;margin-right: 2rem;}
 .discover img{margin:0 auto;display: block;}
-.contact .row{width:90%;margin:0 auto;}
+.contact .row{width:95%;margin:0 auto;}
 }
