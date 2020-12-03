@@ -85,6 +85,6 @@ function activeNavlink(navlink){
     navlink.childNodes[1].classList.add('btn-clicked')
   } else {
     navlink.classList.add('clicked')
-    navlinks[4].childNodes[1].classList.remove('btn-clicked')
+    navlinks[5].childNodes[1].classList.remove('btn-clicked')
   }
 }
