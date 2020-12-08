@@ -1,5 +1,5 @@
 let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh',`${vh}px`)
+document.documentElement.style.setProperty('--vh', `${vh}px`)
 const navlinks = document.querySelectorAll('.nav-link');
 let sendMsgBtn = document.querySelector('.send-msg-btn');
 sendMsgBtn.addEventListener('click', () => alert('Coming Soon...'));
@@ -23,20 +23,24 @@ function progress() {
     document.querySelector('.pageUp').style.display = "none"
   }
 
-  if(windowScroll >= 0 && windowScroll < 500){
+  if (windowScroll >= 0 && windowScroll < 500) {
     activeNavlink(navlinks[0])
   }
-  else if (windowScroll>=500 && windowScroll < 1200) {
+  else if (windowScroll >= 500 && windowScroll < 1200) {
     activeNavlink(navlinks[1])
-  } 
-  else if(windowScroll>=1200 && windowScroll < 2100) {
+  }
+  else if (windowScroll >= 1200 && windowScroll < 2100) {
     activeNavlink(navlinks[2])
+    document.querySelectorAll('.services .row div').forEach((div, index) => {
+      div.style.animation = `services-div both 1s .${index+3}s ease-out`;
+    })
   }
   else {
     activeNavlink(navlinks[5])
   }
 
 }
+window.addEventListener('load', () => document.querySelector('.hero-content').style.animation = "hero-content-animate both 1s ease")
 let texts = ['A Creative Freelancer', 'A Front-End Developer', 'A UI/UX Designer'];
 let count = 0;
 let index = 0;
@@ -73,11 +77,11 @@ $(function () {
 
 navlinks.forEach(navlink => {
   navlink.addEventListener('click', () => {
-   activeNavlink(navlink)
+    activeNavlink(navlink)
   })
 })
 
-function activeNavlink(navlink){
+function activeNavlink(navlink) {
   navlinks.forEach(navlink => {
     navlink.classList.remove('clicked');
   });
@@ -85,6 +89,6 @@ function activeNavlink(navlink){
     navlink.childNodes[1].classList.add('btn-clicked')
   } else {
     navlink.classList.add('clicked')
-    navlinks[4].childNodes[1].classList.remove('btn-clicked')
+    navlinks[5].childNodes[1].classList.remove('btn-clicked')
   }
 }
