@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pick Color Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="title">Pick The Correct Color</h1>
+    <div class="container">
+        <div class="boxes">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+
+        <div class="user-area">
+            <div class="dragable-box-container">
+                <!-- <div class="dragable-box" draggable="true"></div> -->
+            </div>
+            <div class="score-container">
+                <h1>Score: <span class="score">0</span></h1>
+                <h4 class="reset">RESET</h4>
+            </div>
+        </div>
+    </div>
+    <audio src="correct.mp3" id="correct"></audio>
+    <audio src="wrong.mp3" id="wrong"></audio>
+
+    <div class="watermark" style="position: absolute;top:1rem;right:1rem;color:rgba(255, 255, 255, 0.6);box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.6);padding:0.5rem;font-family:monospace;font-size:1.3rem;">
+        <h3>-Build by Sk Abdullah</h3>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
