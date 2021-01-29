@@ -88,4 +88,10 @@ body {
 	grid-column: span 2;
 	grid-row: span 1;
    }
+   .item-7{
+	grid-area: 6 / 1 / 5 / 3;
+}
+.item-7 img{
+	object-position: bottom;
+}
 }
