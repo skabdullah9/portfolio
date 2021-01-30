@@ -3,7 +3,7 @@ body{display: flex;justify-content: center;align-items: center;height: 100vh;fon
 
 .calculator{position: relative;z-index: 50; padding:1rem;border-radius: 10px;z-index: 99;background-color: #fff;}
 .output{background-color: black;padding: .5rem;text-align: right;color:white;border-radius: 5px;width:35rem}
-.btn{font-size: 2.2rem !important;margin:.8rem;border-radius: 50% !important;height: 80px !important;width: 80px !important;}
+.btn{font-size: clamp(0.6rem,2vw,1.2rem) !important;margin:.8rem;border-radius: 50% !important;height: 80px !important;width: 80px !important;}
 .btn:hover{background-color: #efefef;}
 .output input{background-color: transparent;font-size: 2.6rem;padding: .5rem;text-align: right;color:white;border-radius: 5px;outline: none;border: none;width: 100%}
 #clear:hover {background-color: #CC0000 !important }

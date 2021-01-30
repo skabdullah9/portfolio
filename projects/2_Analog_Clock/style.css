@@ -15,3 +15,7 @@ body{height: 100vh;display: flex;justify-content: center;align-items: center;bac
 .light {background-color: white;color:#333}
 .dark{background-color: #333;color:white;}
 .glow{box-shadow: 0px 0px 20px #333;}
+
+@media (max-width: 500px) {
+	.clock{width:90%;height:45%;}
+}
