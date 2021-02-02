@@ -100,7 +100,8 @@ function displayItems(menuItems){
 
 filterBtns.forEach(btn=>{
   btn.addEventListener('click',(e)=>{
-    let category=e.currentTarget.dataset.id
+  let category=e.currentTarget.dataset.id;
+  activeBtn(category);
     let menuCategory=menu.filter(menuItem=>{
       if(menuItem.category==category){
         return menuItem;
@@ -114,3 +115,10 @@ filterBtns.forEach(btn=>{
     }
   })
 })
+
+function activeBtn(category) {
+  filterBtns.forEach(btn=>{
+    btn.classList.remove('active-btn')
+  })
+  document.querySelector(`[data-id="${category}"]`).classList.add('active-btn')
+}

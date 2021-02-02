@@ -160,9 +160,14 @@ article:hover{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   border-radius: var(--radius);
 }
-.btn:hover {
+/* .btn:hover,.btn:focus,.btn-active {
   color: var(--clr-white);
   background: var(--clr-black);
+} */
+
+.filter-btn.active-btn {
+  background: var(--clr-gold);
+  color: var(--clr-white);
 }
 /* section */
 .section {
