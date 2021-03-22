@@ -189,12 +189,12 @@
           </div>
         </div>
         <div class="col-md-8">
-          <form action="">
-            <input type="text" name="" id="" placeholder="  Name" class="form-control mb-4 mt-5">
-            <input type="text" name="" id="" placeholder="  Email" class="form-control mb-4 mt-5">
-            <input type="text" name="" id="" placeholder="  Subject" class="form-control mb-4 mt-5">
-            <input type="text" name="" id="" placeholder="  Your Message" class="form-control mb-4 mt-5">
-            <button class="btn send-msg-btn">SEND MESSAGE</button>
+          <form action="POST" data-netlify="true">
+            <input type="text" name="name" id="name" placeholder="  Name" class="form-control mb-4 mt-5">
+            <input type="text" name="email" id="email" placeholder="  Email" class="form-control mb-4 mt-5">
+            <input type="text" name="subject" id="subject" placeholder="  Subject" class="form-control mb-4 mt-5">
+            <input type="text" name="message" id="message" placeholder="  Your Message" class="form-control mb-4 mt-5">
+            <button type="submit" class="btn send-msg-btn">SEND MESSAGE</button>
           </form>
         </div>
       </div>
