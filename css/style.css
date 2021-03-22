@@ -192,21 +192,10 @@ footer span {
   ;
 }
 
-.discover img {
-  width: 30vw;
-  height: 80vh;
-  object-fit: cover;
-  
-  padding: 7px;
-}
 
-#discover > div {
-  display: flex;
- 
-}
+
 .discover div > .col-md-4 {
   flex:1;
-  background-color: yellow;
   background-image: url(../images/my1.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -214,7 +203,7 @@ footer span {
   box-shadow: 2px 1px 25px 5px rgba(0, 0, 0, .5);
   border:10px solid #1F2233;
   width: 100%;
-  /*overflow: hidden;*/
+  height: 50vh;
  }
 .column-2 {
   flex:1;
