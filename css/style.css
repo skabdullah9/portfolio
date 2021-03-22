@@ -181,6 +181,9 @@ footer span {
   width: 100%;
   background-color: #1F2233;
   padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact {
@@ -193,11 +196,29 @@ footer span {
   width: 30vw;
   height: 80vh;
   object-fit: cover;
-  box-shadow: 2px 1px 25px 5px rgba(0, 0, 0, .5);
+  
   padding: 7px;
 }
 
-
+#discover > div {
+  display: flex;
+ 
+}
+.discover div > .col-md-4 {
+  flex:1;
+  background-color: yellow;
+  background-image: url(../images/my1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 2px 1px 25px 5px rgba(0, 0, 0, .5);
+  border:10px solid #1F2233;
+  width: 100%;
+  /*overflow: hidden;*/
+ }
+.column-2 {
+  flex:1;
+}
 .discover h3,
 .contact h3 {
   color: #FD5C55
