@@ -2,7 +2,7 @@ let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`)
 const navlinks = document.querySelectorAll('.nav-link');
 let sendMsgBtn = document.querySelector('.send-msg-btn');
-sendMsgBtn.addEventListener('click', () => alert('Coming Soon...'));
+
 $(function () {
   $(document).scroll(function () {
     var $nav = $(".fixed-top");
