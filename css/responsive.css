@@ -86,17 +86,4 @@
     margin: 0 auto;
   }
 
-  .discover h1::after {
-    top: 85px;
-    left: 20px;
-  }
-
-  .services h1::after {
-    top: 85px;
-  }
-
-  .contact h1::after {
-    left: 20px;
-    top: 125px
-  }
 }

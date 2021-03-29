@@ -280,9 +280,12 @@ footer span {
 .discover-btns {
   display: flex;
   margin: 0 auto;
-
+  flex-wrap: wrap;
 }
-
+.discover-btns button {
+  flex: 1;
+  white-space: nowrap;  
+}
 .services {
   background-color: #1D2031;
   padding: 3rem 0;
@@ -416,7 +419,7 @@ footer {
 .footer-links a {
   margin:0 1rem;
   box-shadow: 0px 1px 10px 2px rgba(0, 0, 0, .2);
-  padding:15px;
+  padding:10px;
   border-radius: 50%;
   border:1px solid transparent;
   transition: all 0.4s ease-out;
