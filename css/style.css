@@ -23,6 +23,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  background-attachment: fixed;
 }
 
 .hero-overlay {

@@ -16,22 +16,27 @@
       border-radius: 50%;
       height: 150px;
       object-fit: cover;
-      
+      z-index: 4;
+      position: relative;
     }
     .img-container{position: relative}
 
-    .img-bg{width:150px;height: 150px;position: absolute;top:-5px;border-radius: 50%;left: 10px;z-index: -1;}
+    .img-bg{width:150px;height: 150px;position: absolute;top:-5px;border-radius: 50%;left: 10px;z-index: 1;}
 
     body {
-      display: flex;
+      
       height: 100vh;
+     
+      background-color: rgb(222, 233, 236);
+
+    }
+    .container {
+      /*border:2px solid blue;*/
+      height: 100vh;
+      display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background-color: rgb(222, 233, 236);
-      position: absolute;
-      z-index: -20;
-
     }
 
     .review-container {
@@ -42,9 +47,17 @@
       justify-content: center;
       background-color: white;
       position: relative;
-      z-index: -2;
+      min-height: 461px;
     }
-
+    .review-container > *.active {
+      transform: scale(0);
+      opacity: 0;
+      animation: zoom 1s both ease-in-out;
+    }
+    @keyframes zoom {
+      from{transform: scale(0);opacity: 0}
+      to{transform: scale(1);opacity: 1}
+    }
     .review {
       display: flex;
       flex-direction: column;
@@ -60,12 +73,13 @@
     h2{
       border-bottom: 2px solid #17a2b8 !important;padding-bottom: 5px;
     }
-    .quote{width:40px;height: 40px;position: absolute;top:0;left:0;border-radius: 50%;display: flex;align-items: flex-start;justify-content: center;color:white;font-size: 2.5rem;}
+    .quote{width:40px;height: 40px;position: absolute;top:0;left:0;border-radius: 50%;display: flex;align-items: flex-start;justify-content: center;color:white;font-size: 2.5rem;z-index: 4;}
     .button-container button {
       border: none;
       background-color: transparent;
       outline: none;
     }
+
     .randomBtn:hover{background-color: white !important;}
     @media(max-width: 800px){
       .review-container{width:70%;}
@@ -74,10 +88,11 @@
       .review-container{width: 90%;}
     }
   </style>
-  <title>Hello, world!</title>
+  <title>Our Reviews</title>
 </head>
 
 <body>
+  <div class="container">
   <h2 class="mb-3">Our reviews</h2>
     <div class="review-container shadow p-4 rounded">
     <div class="img-container">
@@ -99,6 +114,7 @@
     </div>
 
   </div>
+</div>
   <div class="watermark" style="position: absolute;bottom:1rem;right:1rem;color:hsl(209, 61%, 16%);border:3px solid  hsl(210, 31%, 80%);;border-radius: 5px;padding:0;">
     <h4 style="padding:1rem 1rem 0.5rem 1rem">-Build by Sk Abdullah</h4>
   </div>
@@ -152,6 +168,7 @@
           "Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ",
       },
     ];
+    let elements = document.querySelectorAll('.container > *')
     let img = document.getElementById('img');
     let author = document.querySelector('.author');
     let job = document.querySelector('.job');
@@ -194,8 +211,12 @@
       } 
         getPerson(currentIteration);
         clearInterval(loop)
-        
-      
+        elements.foreach(el=>{
+          el.classList.remove('active')
+        })
+        elements.foreach(el=>{
+          el.classList.add('active')
+        })
     })
     prevBtn.addEventListener('click', () => {
       currentIteration--;
