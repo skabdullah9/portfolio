@@ -92,3 +92,10 @@ function activeNavlink(navlink) {
     navlinks[5].childNodes[1].classList.remove('btn-clicked')
   }
 }
+
+
+const btn = document.querySelector(".fancy-burger");
+
+btn.addEventListener("click", () => {
+  btn.querySelectorAll("span").forEach((span) => span.classList.toggle("open"));
+});
