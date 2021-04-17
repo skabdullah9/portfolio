@@ -86,7 +86,7 @@ body {
 
 .grid__item p {
 	color:#FD5C55;
-	font-size: 1.5rem;
+	font-size: 1.8rem;
 	position: absolute;
 	bottom:0;
 	left:50%;
@@ -103,6 +103,7 @@ body {
 	font-family: helvatice/arial;
 	font-style: italic;
 	letter-spacing: 2px;
+	font-family: monospace;
 }
 
 @media (max-width: 650px) {

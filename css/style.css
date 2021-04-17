@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+
 :root {
   --button-width: 30px;
   --button-height: calc(var(--button-width) * .8);
@@ -21,6 +23,7 @@ html {
 
 body {
   transition: all 1s ease-in-out;
+  cursor: url(../images/cursor.png), auto !important;
 }
 
 .hero {
@@ -205,6 +208,7 @@ footer span {
   font-weight: 700;
   margin-top: 1.1rem;
   letter-spacing: 4px;
+  font-family: 'Marck Script', cursive;
 }
 
 .hero-content h5 {
@@ -265,8 +269,9 @@ footer span {
   flex:1;
 }
 .discover h3,
-.contact h3 {
-  color: #FD5C55
+.contact h3,
+.services h3 {
+  color: #FD5C55;
 }
 
 .discover h1,
@@ -275,7 +280,8 @@ footer span {
   color: white;
   font-size: 2.6rem;
   position: relative;
-  padding-bottom: 1.7rem;
+  padding-bottom: 1rem;
+  font-family: 'Marck Script', cursive;
 }
 
 .discover h1::after,
@@ -343,9 +349,14 @@ footer span {
   white-space: nowrap;  
 }
 .services {
-  background-color: #1D2031;
+  min-height: 100vh;
   padding: 3rem 0;
   border-bottom: 1px solid #333333;
+
+
+ background-color: #1d2031;
+background-image: url("https://www.transparenttextures.com/patterns/arabesque.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 .services h4 {
@@ -357,10 +368,6 @@ footer span {
   color: #CDCCCC;
   text-align: center;
 
-}
-
-.services h3 {
-  color: #FD5C55
 }
 
 .services h1 {
@@ -379,11 +386,11 @@ footer span {
 }
 
 .services .row div {
+  background-color: #1D2031;
   border: 1px solid #FD5C55;
   border-radius: 5px;
   margin: 1.6rem 0;
   padding: 1rem;
-  background-color: transparent;
   cursor: pointer;
   transition: all .4s ease-out;
   cursor: pointer;
@@ -428,20 +435,25 @@ footer span {
 
 
 
-.contact input {
+.contact input,
+.contact textarea {
   background-color: transparent;
   border: 3px solid #282c3e;
   outline: none;
   box-shadow: none;
 }
 
+.contact textarea:focus {
+  background: transparent;
+}
+
 .contact .box {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   border: 1px solid #333333;
   margin: 2rem 0;
-  padding: 1.5rem 0.5rem;
+  padding: 1.5rem 0.5rem 1.5rem 1.5rem;
   background-color: #1F2233;
   word-wrap: break-word;
 }
@@ -449,7 +461,6 @@ footer span {
 .box-content {
   color: #CDCCCC;
 }
-
 .box-content p {
   font-size: 0.95rem;
 }
@@ -472,17 +483,24 @@ footer {
 .footer-links {
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer-links a {
   margin:0 1rem;
   box-shadow: 0px 1px 10px 2px rgba(0, 0, 0, .2);
-  padding:10px;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 50%;
-  border:1px solid transparent;
   transition: all 0.4s ease-out;
 }
 .footer-links a:hover {
-  border-color: #FD5C55;
+  box-shadow: 0px 1px 10px 2px #FD5C55;
 }
 footer h1 span {
   margin-left: 5px;
@@ -491,12 +509,15 @@ footer h1 span {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(253, 92, 85)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
-.contact input {
+.contact input,
+.contact textarea {
   outline: none;
 }
 
 .contact input:focus,
-.contact input:active {
+.contact input:active,
+.contact textarea:focus,
+.contact textarea:active {
   border: 1px solid #FD5C55;
   background-color: transparent;
   outline: none !important;
@@ -540,4 +561,24 @@ hr {
 .navbar-toggler {
   border-color: transparent !important;
   outline: none !important;
+}
+
+
+/*::-webkit-scrollbar {
+  display: none;
+}*/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    background-color:#282c3e;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background-color: #FD5C55;
 }
