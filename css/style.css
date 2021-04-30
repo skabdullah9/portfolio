@@ -244,12 +244,19 @@ footer span {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
+.svg {
+  position: absolute;
+  left:0;
+  bottom: 0;
+  /* transform: scale(2.5); */
+}
 .contact {
   background-color: #24283D;
   padding-top: 0;
-  ;
 }
 
 
@@ -441,6 +448,7 @@ background-image: url("https://www.transparenttextures.com/patterns/arabesque.pn
   border: 3px solid #282c3e;
   outline: none;
   box-shadow: none;
+  color: #fff !important;
 }
 
 .contact textarea:focus {

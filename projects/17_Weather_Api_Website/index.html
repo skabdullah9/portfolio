@@ -36,9 +36,14 @@
 
     .area {
       position: relative;
-      margin: 7rem 0rem 2rem 0rem;
+      margin: 2rem 0rem 2rem 0rem;
     }
-
+    .container > h1,
+    small {
+      /* text-transform: uppercase; */
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
     .area button {
       position: absolute;
       top: 0;
@@ -61,6 +66,8 @@
 
 <body>
   <div class="container">
+    <h1 class="text-center text-white mt-5">Weather App</h1>
+    <small class="text-center text-white">| Simple & Fast |</small>
     <div class="area">
       <input type="text" placeholder=" Enter your city name " class="form-control shadow-lg p1" id="cityname">
       <button class="btn btn-warning" id="getWeather">Show Weather</button>
@@ -110,7 +117,7 @@
         <div class="description"><h4 class="text-center">${data.weather[0].description}</h4></div>
       </div>`
           var skycons = new Skycons({ "color": "white" });
-          skycons.set("icon1", Skycons.PARTLY_CLOUDY_DAY);
+          skycons.set("icon1", `${skycons}.${data.weather[0].icon}`);
 
           skycons.play();
         }

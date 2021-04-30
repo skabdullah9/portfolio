@@ -1,3 +1,10 @@
+const hamBurger = document.querySelector(".fancy-burger");
+
+hamBurger.addEventListener("click", () => {
+  hamBurger.querySelectorAll("span").forEach((span) => span.classList.toggle("open"));
+});
+
+
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`)
 const navlinks = document.querySelectorAll('.nav-link');
@@ -57,7 +64,7 @@ function type() {
     count++;
     index = 0;
   }
-  setTimeout(type, 400)
+  setTimeout(type, 200)
 }
 type();
 
@@ -82,6 +89,7 @@ navlinks.forEach(navlink => {
 })
 
 function activeNavlink(navlink) {
+  
   navlinks.forEach(navlink => {
     navlink.classList.remove('clicked');
   });
@@ -91,11 +99,12 @@ function activeNavlink(navlink) {
     navlink.classList.add('clicked')
     navlinks[5].childNodes[1].classList.remove('btn-clicked')
   }
+  hamBurger.querySelectorAll("span").forEach((span) => span.classList.remove("open"));
 }
 
+const submit = document.querySelector('form button');
 
-const btn = document.querySelector(".fancy-burger");
-
-btn.addEventListener("click", () => {
-  btn.querySelectorAll("span").forEach((span) => span.classList.toggle("open"));
-});
+submit.addEventListener('submit',(e)=>{
+  e.preventDefault();
+  
+})

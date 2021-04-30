@@ -70,6 +70,7 @@
     </div>
   </div>
   <section class="discover" id="discover">
+  <img src="images/method-draw-image.svg" class="svg" alt="">
     <div class="container" >
       <div class="d-md-flex">
         <div class="col-md-4 column-1">
@@ -194,12 +195,12 @@
           </div>
         </div>
         <div class="col-lg-7 col-xl-8 p-0">
-          <form action="POST" data-netlify="true">
-            <input type="text" name="name" id="name" placeholder="  Name" class="form-control mb-4 mt-5">
-            <input type="text" name="email" id="email" placeholder="  Email" class="form-control mb-4 mt-5">
-            <input type="text" name="subject" id="subject" placeholder="  Subject" class="form-control mb-4 mt-5">
-            <textarea type="text" name="message" id="message" placeholder="  Your Message" class="form-control mb-4 mt-5"></textarea>
-            <button type="submit" class="btn send-msg-btn d-block mx-auto mx-md-0">SEND MESSAGE</button>
+          <form action="https://formspree.io/f/xdoykwkl" method="POST">
+            <input type="text" name="name" id="name" placeholder="Name" class="form-control mb-4 mt-5">
+            <input type="email" name="_replyto" id="email" placeholder="Email" class="form-control mb-4 mt-5">
+            <input type="text" name="subject" id="subject" placeholder="Subject" class="form-control mb-4 mt-5">
+            <textarea type="text" name="message" id="message" placeholder="Your Message" class="form-control mb-4 mt-5"></textarea>
+            <button type="submit" class="btn send-msg-btn d-block mx-auto mx-md-0" >SEND MESSAGE</button>
           </form>
         </div>
       </div>

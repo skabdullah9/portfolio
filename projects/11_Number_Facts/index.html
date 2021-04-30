@@ -17,7 +17,8 @@
     }
 
     body {
-      color: white
+      color: white;
+      min-height: 120vh;
     }
 
     .radios div{margin:1rem}
@@ -29,7 +30,10 @@
 <body class="bg-dark">
   <div class="container">
     <div class="card bg-primary col-md-6 mx-auto mt-4 p-4">
-      <h1 class="text-white">Numbers Fact</h1>
+      <div class="watermark" style="position: absolute;top:0.4rem;right:0.4rem;color:rgba(255, 255, 255, 0.7);box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);border-radius:5px;padding: 0.4rem;font-family:monospace;">
+        <h6 style="margin:0;">- Build by Sk Abdullah</h6>
+    </div>
+      <h1 class="text-white mt-4">Numbers Fact</h1>
       <p class="text-white"> Let your metrics tell tales with our API of number facts </p>
       <div class="radios">
         <div>
@@ -57,9 +61,7 @@
             </div>
     </div>
   </div>
-  <div class="watermark" style="position: absolute;top:1rem;right:1rem;color:rgba(255, 255, 255, 0.8);box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.4);padding:0.5rem;font-family:monospace;font-size:1.3rem;">
-    <h4>-Build by Sk Abdullah</h4>
-</div>
+  
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

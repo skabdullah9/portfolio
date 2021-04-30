@@ -9,13 +9,19 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <title>Hello, world!</title>
+    <title>Color Generator</title>
     <style>
+    	nav {
+    		display: flex;
+    		justify-content: space-around;
+    		align-items: center;
+    	}
         .background {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 86.5vh;
+            transition: all 1s ease;
         }
 
         button {
@@ -26,6 +32,9 @@
             font-size: 1.5rem !important;
             font-weight: 600 !important;
             cursor: pointer;
+        }
+        .switch {
+            background: transparent;
         }
 
         .display {
@@ -58,6 +67,9 @@
 <body>
     <nav class="shadow text-center py-3">
         <h2 class="h2">HEX COLOR GENERATOR</h2>
+        <div>
+        	<button class="switch">Gradient</button>
+        </div>
     </nav>
     <div class="background">
         <div class="display">
@@ -86,8 +98,19 @@
     <script>
         let hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
         let color = '#';
+        let prevColor = 'transparent'
         let btn = document.querySelector('.btn');
         let hexValue = document.getElementById('hexValue');
+        let boolean = false;
+
+        let switchBtn = document.querySelector('.switch');
+        switchBtn.addEventListener('click',()=> {
+        	boolean = !boolean;
+        	generateColor();
+        })
+
+
+
         btn.addEventListener('click', () => generateColor())
         window.addEventListener('load',()=> generateColor())
         function getRandomNumber() {
@@ -98,11 +121,23 @@
                 color += hex[getRandomNumber()]
                 hexValue.textContent = color;
             }
-            console.log(color)
-            document.querySelector('.background').style.backgroundColor = color;
+            
+            if(!boolean) {
+            	prevColor = color;
+            	switchBtn.textContent = 'Gradient';
+                
+            }
+            document.querySelector('.background').style.background = `linear-gradient(45deg, ${prevColor}, ${color})`;
             document.querySelector('.h2').style.color = color;
             document.querySelector('.btn').style.backgroundColor = "white";
             document.querySelector('.btn').style.color = color;
+            if(boolean) {
+                hexValue.textContent = `linear-gradient(45deg, ${prevColor}, ${color})`;
+            	 prevColor = color;
+            	 switchBtn.textContent = 'Normal'
+                 
+            }
+           
             color = '#';
         }
         function copyToClipboard() {
