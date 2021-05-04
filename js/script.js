@@ -1,5 +1,8 @@
 const hamBurger = document.querySelector(".fancy-burger");
-
+// if () {
+//   console.log('hye yes')
+//   hamBurger.querySelectorAll("span").forEach((span) => span.classList.remove("open"));
+// }
 hamBurger.addEventListener("click", () => {
   hamBurger.querySelectorAll("span").forEach((span) => span.classList.toggle("open"));
 });
@@ -16,7 +19,10 @@ $(function () {
     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
   });
 });
-window.onscroll = function () { progress() }
+window.onscroll = function () {
+  progress()
+}
+
 function progress() {
   let windowScroll = document.body.scrollTop || document.documentElement.scrollTop
   let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -32,17 +38,14 @@ function progress() {
 
   if (windowScroll >= 0 && windowScroll < 500) {
     activeNavlink(navlinks[0])
-  }
-  else if (windowScroll >= 500 && windowScroll < 1200) {
+  } else if (windowScroll >= 500 && windowScroll < 1200) {
     activeNavlink(navlinks[1])
-  }
-  else if (windowScroll >= 1200 && windowScroll < 2100) {
+  } else if (windowScroll >= 1200 && windowScroll < 2100) {
     activeNavlink(navlinks[2])
     document.querySelectorAll('.services .row div').forEach((div, index) => {
       div.style.animation = `services-div both 1s .${index+3}s ease-out`;
     })
-  }
-  else {
+  } else {
     activeNavlink(navlinks[5])
   }
 
@@ -53,6 +56,7 @@ let count = 0;
 let index = 0;
 let currentText = '';
 let letter = ''
+
 function type() {
   if (count === texts.length) {
     count = 0
@@ -78,6 +82,11 @@ $(function () {
 $(function () {
   $(document).click(function (event) {
     $('#navbarNav').collapse('hide');
+
+    if ($('.fancy-burger').hasClass("collapsed")) {
+      $('.rectangle').removeClass('open')
+    }
+
   })
 })
 
@@ -89,7 +98,7 @@ navlinks.forEach(navlink => {
 })
 
 function activeNavlink(navlink) {
-  
+
   navlinks.forEach(navlink => {
     navlink.classList.remove('clicked');
   });
@@ -104,7 +113,7 @@ function activeNavlink(navlink) {
 
 const submit = document.querySelector('form button');
 
-submit.addEventListener('submit',(e)=>{
+submit.addEventListener('submit', (e) => {
   e.preventDefault();
-  
+
 })

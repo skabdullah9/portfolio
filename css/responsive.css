@@ -11,26 +11,35 @@
 @media (max-width:990px) {
   .navbar {
     background-color: #1F2233 !important;
+    
   }
-
-  .navbar ul li a {
+  .navbar .navbar-nav {
+    padding-bottom: 2rem;
+  }
+  .navbar .nav-link {
     text-align: center;
     font-size: 1.2rem;
     margin: 0.5rem 0.5rem;
   }
 
-  ul li a:hover,
-  ul li a:active,
+  a.nav-link:hover,
+  a.nav-link:active,
   .nav-link.clicked {
     background-color: #FD5C55;
     color: white !important;
   }
-
+  a.nav-link::before {
+    content: '';
+    height: 0;
+  }
   .contact-btn {
     margin: 1rem auto;
+    display: block;
     font-size: 1.2rem;
+    text-align: center;
     color: white !important
   }
+  
   .fancy-burger {
     display: block !important;
   }
