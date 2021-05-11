@@ -100,7 +100,7 @@
 
     function getWeatherReport() {
       console.log('enter pressed')
-      fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=metric&appid=e7d61398e3b4124ab4f7bd68bffaf97c`).then(res => res.json()).then(data => {
+      fetch(`https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=${city.value}&units=metric&appid=e7d61398e3b4124ab4f7bd68bffaf97c`).then(res => res.json()).then(data => {
         console.log(data)
         if (data.message) {
           document.querySelector('.error-msg').innerHTML = `<h1 class="text-center"><i>${data.message}</i></h1>`;

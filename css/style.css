@@ -269,9 +269,9 @@ footer span {
 
 .svg {
   position: absolute;
-  left:0;
-  bottom: 0;
-  /* transform: scale(2.5); */
+  left:2rem;
+  bottom: 0.7rem;
+  transform: scale(1.2) rotate(-10deg);
 }
 .contact {
   background-color: #24283D;
@@ -425,6 +425,7 @@ background-image: url("https://www.transparenttextures.com/patterns/arabesque.pn
   transform: translateX(-500%) scale(0);
   width: 30rem;
   min-height: 19rem;
+
 }
 @keyframes services-div {
   from{transform: translateX(-500%) scale(0);}
