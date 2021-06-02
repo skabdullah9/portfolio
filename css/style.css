@@ -471,8 +471,12 @@ background-image: url("https://www.transparenttextures.com/patterns/arabesque.pn
   outline: none;
   box-shadow: none;
   color: #fff !important;
+  caret-color: #FD5C55;
 }
-
+/* .contact input:hover,
+.contact textarea:hover {
+  border:1px solid #FD5C55;
+}  */
 .contact textarea:focus {
   background: transparent;
 }
