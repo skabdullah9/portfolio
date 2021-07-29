@@ -1,3 +1,17 @@
+::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    background-color:#282c3e;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background-color: #FD5C55;
+}
 body {
 	background-color: black;
 	/* min-height: 100vh; */
@@ -81,7 +95,7 @@ body {
 	grid-row: span 2;
 }
 .item-14{
-	grid-column: span 1;
+	
 	grid-row: span 2;
 }
 
@@ -132,8 +146,16 @@ body {
    }
    .item-7{
 	grid-area: 6 / 1 / 5 / 3;
-}
-.item-7 img{
+  }
+   .item-7 img{
 	object-position: bottom;
-}
+  }
+  .item-11 {
+	  display: none;
+  }
+ 
+  .item-14 {
+	  grid-row-start: 11;
+	  grid-column-start: 2;
+  }
 }
