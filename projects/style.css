@@ -21,12 +21,12 @@ body {
 	height: 100%;
 	object-fit: cover;
 	cursor: pointer;
-	transition: all 0.4s ease-in;
-	transform: scale(1) rotate(0deg);
+	transition: transform 0.4s ease-in;
+	transform: scale(1) ;
 	opacity: 1;
 }
 .grid__item img:hover{
-	transform: scale(1.15) rotate(2deg);
+	transform: scale(1.15) ;
 	opacity: 0.7;
 	filter: blur(2px);
 	-webkit-filter: blur(2px);
@@ -34,9 +34,18 @@ body {
 .grid__item img:hover + p {
 	transform: translateX(-50%) translateY(0);
 }
-
+.item-13 img {
+	object-fit: contain;
+}
 .item-0{
 	grid-column: span 2;
+}
+.item-0 img,
+.item-5 img,
+.item-4 img,
+.item-2 img,
+.item-6 img {
+	object-position: top;
 }
 
 .item-2{
