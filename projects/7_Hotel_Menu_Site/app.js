@@ -77,6 +77,7 @@ let filterBtns=document.querySelectorAll('.filter-btn');
 window.addEventListener('DOMContentLoaded',()=>{
   displayItems(menu)
 })
+gsap.to('.underline', {x: 120, repeat: -1, duration: 2, yoyo: true, ease: 'power1.inOut'})
 function displayItems(menuItems){
   let displayMenu= menuItems.map(item=>{
     return `<article class="menu-item">
@@ -96,6 +97,7 @@ function displayItems(menuItems){
   })
   displayMenu=displayMenu.join("")
   sectionCenter.innerHTML=displayMenu
+  gsap.fromTo('.menu-item', {opacity: 0, y: -100, }, {opacity: 1, y: 0,  stagger: .1, ease: 'bounce'})
 }
 
 filterBtns.forEach(btn=>{
@@ -122,3 +124,4 @@ function activeBtn(category) {
   })
   document.querySelector(`[data-id="${category}"]`).classList.add('active-btn')
 }
+
