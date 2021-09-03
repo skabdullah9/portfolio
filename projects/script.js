@@ -1,4 +1,4 @@
-let folders= ['https://firechatonline.netlify.app', 'https://covid19-live-report.netlify.app', 'https://netinfo.netlify.app', '10_Typing_Game', 'https://weather-report-vue.netlify.app', '4_Text_To_Speech', 'https://gifffinder.netlify.app', '5_Bookmarks_App', 'https://todontodo.netlify.app', '7_Hotel_Menu_Site', '6_piano_app', '8_Pick_Color_Game', 'https://vuexcart.netlify.app', '3_Mouse_Move_Shadow',  '11_randomHex', ]
+let folders= ['https://firechatonline.netlify.app', 'https://ipaddresstrackonline.netlify.app', 'https://netinfo.netlify.app', '10_Typing_Game',  'https://covid19-live-report.netlify.app', '4_Text_To_Speech', 'https://gifffinder.netlify.app', '5_Bookmarks_App', 'https://vuexcart.netlify.app', '7_Hotel_Menu_Site', '6_piano_app',  '8_Pick_Color_Game',   'https://todontodo.netlify.app','3_Mouse_Move_Shadow',  '11_randomHex', ]
 
 document.addEventListener('DOMContentLoaded',()=>{
 const thumbnails = document.querySelectorAll('.grid__item')

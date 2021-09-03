@@ -17,6 +17,7 @@ body {
 	/* min-height: 100vh; */
 	margin:1px;
 }
+
 .grid {
 	min-height: auto;
 	display: grid;

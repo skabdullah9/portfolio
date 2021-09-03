@@ -20,7 +20,13 @@
 html {
   scroll-behavior: smooth;
 }
-
+a {
+  color: #CDCCCC
+}
+a:hover {
+  color: inherit;
+  display: block;
+}
 body {
   transition: all 1s ease-in-out;
   /* cursor: url(../images/cursor.png), auto !important; */
