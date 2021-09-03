@@ -22,7 +22,7 @@ body {
 	min-height: auto;
 	display: grid;
 	grid-template-columns: repeat(5,1fr);
-	grid-template-rows: repeat(5, 25vh);
+	grid-template-rows: repeat(4, 24.5vh);
 	grid-gap: 5px;
 	max-width: 100%;
 	grid-auto-flow: dense;
@@ -49,9 +49,6 @@ body {
 .grid__item img:hover + p {
 	transform: translateX(-50%) translateY(0);
 }
-.item-13 img {
-	object-fit: contain;
-}
 .item-0{
 	grid-column: span 2;
 }
@@ -61,6 +58,7 @@ body {
 .item-2 img,
 .item-6 img {
 	object-position: top;
+	object-fit: cover;
 }
 
 .item-2{
@@ -85,34 +83,6 @@ body {
 	object-position: top;
 }
 
-.item-9{
-	grid-row: span 3;
-}
-.item-12{
-	grid-row: span 2;
-	grid-column: span 2;
-}
-.item-13{
-	grid-row: span 2;
-}
-.item-14{
-	
-	grid-row: span 2;
-}
-
-.item-15{
-	grid-column: span 1;
-	grid-row: span 2;
-
-}
-.item-16,.item-18{
-	grid-column: span 2;
-	grid-row: span 2;
-
-}
-.item-18{
-	grid-column: span 1;
-}
 
 .grid__item p {
 	color:#FD5C55;
@@ -150,13 +120,5 @@ body {
   }
    .item-7 img{
 	object-position: bottom;
-  }
-  .item-11 {
-	  display: none;
-  }
- 
-  .item-14 {
-	  grid-row-start: 11;
-	  grid-column-start: 2;
   }
 }
