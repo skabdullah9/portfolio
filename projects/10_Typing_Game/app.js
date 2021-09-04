@@ -84,6 +84,7 @@ function startTimer() {
         match.innerHTML = showMatch('danger', 'Game Over')
         container.style.animation = "shake .7s forwards ease-out"
         audios[2].play()
+        inputField.value = ''
     }
     timeLeftContainer.innerHTML = timeLeft;
     timeLeft--;

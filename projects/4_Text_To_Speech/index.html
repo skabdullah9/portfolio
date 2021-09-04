@@ -7,29 +7,34 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="overlay">
 
+  
     <div class="voiceinator">
 
-      <h1>The Voiceinator 5000</h1>
+      <h1>The Voiceinator 3000</h1>
 
       <select name="voice" id="voices">
         <option value="">Select A Voice</option>
       </select>
 
       <label for="rate">Rate:</label>
-      <input name="rate" type="range" min="0" max="3" value="1" step="0.1">
+      <input name="rate" type="range" min="0" max="3" value="0.5" step="0.1">
 
       <label for="pitch">Pitch:</label>
 
-      <input name="pitch" type="range" min="0" max="2" step="0.1">
-      <textarea name="text">Hello! I love JavaScript 👍</textarea>
+      <input name="pitch" type="range" min="0" max="2" value="2" step="0.1">
+      <textarea name="text">Allow me to introduce myself I am Voiceinator 👍</textarea>
       <button id="stop">Stop!</button>
       <button id="speak">Speak</button>
 
     </div>
-    <div class="watermark" style="position: absolute;top:1rem;right:1rem;color:rgba(0, 0, 0, 0.7);box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);padding:0rem 0.5rem;font-family:monospace;font-size:2rem;">
+    <div class="watermark" style="position: absolute;bottom:1rem;left:1rem;color:rgba(255, 255, 255, 0.7);box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);padding:0rem 0.5rem;font-family:monospace;font-size:1.5rem;">
       <h3>-Build by Sk Abdullah</h3>
   </div>
+
+  </div>
+
 <script>
   const msg = new SpeechSynthesisUtterance();
   let voices = [];
@@ -41,14 +46,13 @@
   msg.text=document.querySelector('[name="text"]').value;
   function populateVoices(){
     voices=this.getVoices()
-    voicesDropdown.innerHTML= voices
-    .map(voice=>`<option value="${voice.name}">${voice.name} [${voice.lang}]</option>`).join('')
-    
+    // voicesDropdown.innerHTML= voices.map(voice=>`<option value="${voice.name}">${voice.name} [${voice.lang}]</option>`).join('')
+    let voice = voices[3]
+    voicesDropdown.innerHTML= `<option value="${voice.name}">${voice.name} [${voice.lang}]</option>`
   }
 
   function setVoice(){
     msg.voice= voices.find(voice=>voice.name===this.value)
-    // console.log(msg);
     toggle()
   }
   function toggle(control=true){
