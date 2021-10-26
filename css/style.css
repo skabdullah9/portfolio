@@ -6,7 +6,7 @@
   --rectangle-height: calc(var(--button-width) * 0.1);
   --rectangle-radius: calc(var(--button-width) * 0.04);
   --translate: calc(var(--button-width) * 0.17);
-  --transition: 0.65s;
+  --transition: 0.3s;
 }
 
 *,
