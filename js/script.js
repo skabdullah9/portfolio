@@ -51,7 +51,7 @@ function progress() {
 
 }
 window.addEventListener('load', () => document.querySelector('.hero-content').style.animation = "hero-content-animate both 1s ease")
-let texts = ['A Creative Freelancer', 'A Front-End Developer', 'A UI/UX Designer'];
+let texts = ['A UI/UX Designer', 'A Creative Freelancer', 'A Front-End Developer', ];
 let count = 0;
 let index = 0;
 let currentText = '';

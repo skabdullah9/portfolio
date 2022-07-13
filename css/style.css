@@ -232,9 +232,13 @@ footer span {
 }
 .hero-content img {
   width: 200px;
-  border-radius: 50%;
-  display: block;
-  margin: 0 auto;
+    height: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    object-position: bottom;
+    filter: brightness(0.3);
 }
 
 .hero-content h1 {
@@ -296,10 +300,10 @@ footer span {
 
 .discover div > .col-md-4 {
   flex: 1;
-  background-image: url(../images/my1.jpg);
+  background-image: url(../images/hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: bottom;
   box-shadow: 2px 1px 25px 5px rgba(0, 0, 0, 0.5);
   border: 10px solid #1f2233;
   width: 100%;
